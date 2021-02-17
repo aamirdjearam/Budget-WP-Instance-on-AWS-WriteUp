@@ -2,7 +2,9 @@
 
 ## Objective
 
-Short Summary: Host an infrequently used WordPress Website completely on AWS as inexpensively as possible.
+Link to the Target Website: 
+
+Short Summary: There are multiple ways to host a wordpress website on AWS with different levels of cost-effectiveness. Skip to the [conclusion](##Conclusion) for the results.
 
 Longer version:
 
