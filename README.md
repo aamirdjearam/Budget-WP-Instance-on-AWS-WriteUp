@@ -2,6 +2,10 @@
 
 ## Objective
 
+Short Summary: Host an infrequently used WordPress Website completely on AWS as inexpensively as possible.
+
+Longer version:
+
 The Ultimate AWS Cheat Sheet is a wordpress Website hosted on Amazon Elastic Compute Cloud. The objective of this project is to host the website completely using AWS services for as little as possible. The project should adhere to the core principles of the AWS Well-Architected Principles but should prioritize cost-optomization. We will architect several different solutions and then choose the most appropriate path depending on what the customer values.
   
 This Readme will be seperated into several different sections
@@ -40,8 +44,9 @@ In the most probable scenario (less than 500 visitors per month) a T3a Nano Inst
 2. Offers greater performance due to the additional VCPU core compared to T2 as well as better cpu architecture
 3. Has unlimited Burst so the website will be able to handle a relatively large amount of stress for prolonged periods
 
+Choosing this method does come with one big caveat however:
 
-5. 
+Similar to the T2Unlimited instances, the T3 instances allow for unlimited burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) 
 
 
 
