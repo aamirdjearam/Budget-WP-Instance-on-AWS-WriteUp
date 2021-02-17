@@ -87,4 +87,8 @@ All in all if the customer would like a very simple to setup and maintain soluti
 
 ## S3 Integration
 
-Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosting these in S3 buckets, we can save on the costs while ensuring that all of our content is safely hosted in the cloud. S3 videos can be embeded into the wordpress site using this [plugin](https://github.com/anthony-mills/s3-video) as long as the proper permissions are allowed. That being said in the case of AWS Ultimate Cheat Sheet since the data does not need to be secure, it would actually better for the SEO if it was Youtube links embedded in the site. 
+Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosting these in S3 buckets, we can save on the costs while ensuring that all of our content is safely hosted in the cloud. S3 videos can be embeded into the wordpress site using this [plugin](https://github.com/anthony-mills/s3-video) as long as the proper permissions are allowed. That being said in the case of AWS Ultimate Cheat Sheet since the data does not need to be secure, it would actually better for the SEO if it was Youtube links embedded in the site. Considering we don't know the expected traffic on the site, it would make the most sense to go with [3 Intelligent Tiering](https://aws.amazon.com/s3/storage-classes/) for maximum cost savings.
+
+## Route 53
+
+Route 53 is a useful service for registering a domain name and DNS for the site. 
