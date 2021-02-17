@@ -137,8 +137,13 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 Resources Used:
 
 https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress
+
 https://aws.amazon.com/blogs/compute/deploying-a-highly-available-wordpress-site-on-amazon-lightsail-part-1-implementing-a-highly-available-lightsail-database-with-wordpress/
+
 https://aws.amazon.com/getting-started/hands-on/build-wordpress-website/
+
 https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/
+
 http://d0.awsstatic.com/whitepapers/deploying-wordpress-with-aws-elastic-beanstalk.pdf
+
 https://aws.amazon.com/blogs/aws/new-t3-instances-burstable-cost-effective-performance/
