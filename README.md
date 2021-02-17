@@ -87,4 +87,4 @@ All in all if the customer would like a very simple to setup and maintain soluti
 
 ## S3 Integration
 
-Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosting these in S3 buckets, we can save on the costs while ensuring that all of our content is safely hosted in the cloud. S3 videos can be embeded into the individual site by 
+Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosting these in S3 buckets, we can save on the costs while ensuring that all of our content is safely hosted in the cloud. S3 videos can be embeded into the wordpress site using this [plugin](https://github.com/anthony-mills/s3-video) as long as the proper permissions are allowed. That being said in the case of AWS Ultimate Cheat Sheet since the data does not need to be secure, it would actually better for the SEO if it was Youtube links embedded in the site. 
