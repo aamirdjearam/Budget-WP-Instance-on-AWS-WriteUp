@@ -2,7 +2,7 @@
 
 ## Objective
 
-Link to the Target Website: 
+Link to the Target Website: 	ultimateawscheatsheet.com
 
 Short Summary: There are multiple ways to host a wordpress website on AWS with different levels of cost-effectiveness. Skip to the [conclusion](#Conclusion) for the results.
 
@@ -135,6 +135,10 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 ### T3 instances are more cost-effective and better performing compared to their T2 counter-parts
 
 ### Migrating Wordpress Instances cannot be automated (just of yet... keep an eye for future projects)
+
+
+Thank you for reviewing my project! :)
+
 
 Resources Used:
 
