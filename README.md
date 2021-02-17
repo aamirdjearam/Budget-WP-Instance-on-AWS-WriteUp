@@ -128,13 +128,13 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 
 ## The key take away!
 
-### It's important to always well architect solutions with a long-term plan from the start. This can help mitigate problems down the road with scalability/reliability. 
+* It's important to always well architect solutions with a long-term plan from the start. This can help mitigate problems down the road with scalability/reliability * 
 
-### Turn off Unlimited Burst on T3 instances to save money and prevent an unexpected bill
+* Turn off Unlimited Burst on T3 instances to save money and prevent an unexpected bill *
 
-### T3 instances are more cost-effective and better performing compared to their T2 counter-parts
+* T3 instances are more cost-effective and better performing compared to their T2 counter-parts *
 
-### Migrating Wordpress Instances cannot be automated (just of yet... keep an eye for future projects)
+* Migrating Wordpress Instances cannot be automated (just of yet... keep an eye for future projects) *
 
 
 Thank you for reviewing my project! :)
