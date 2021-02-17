@@ -105,10 +105,9 @@ Finally registering a domain with the suffix .link ($5 USD) would be the most-co
 
 Let's recap all of the options with a nifty table
 
-| CPU Cores     | RAM           || Price Per Hour| Second Header |
-| ------------- | ------------- || ------------- | ------------- |
-| 1 CPU Core (Skylake)  | Content Cell  || Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  || Content Cell  | Content Cell  |
-
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
   
