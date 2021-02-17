@@ -33,8 +33,13 @@ Part of architecting any solution on AWS should start with estimating Hardware R
 
 Lets break down the possible configurations:
 
+[T2 Instances:](https://i.imgur.com/n5UMxPy.png)
+
 T2 Nano ($0.0030)
 T2 Micro ($0.0070)
+
+[T3 Instances:](https://i.imgur.com/3FtouFx.png)
+
 T3a Nano ($0.0028)
 T3a Micro ($0.0056)
 
