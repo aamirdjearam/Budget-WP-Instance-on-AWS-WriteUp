@@ -103,11 +103,11 @@ Finally registering a domain with the suffix .link ($5 USD) would be the most-co
 
 Let's recap all of the options:
 
-Most Cost Effective -> T3a Nano (Limited Burst) -> 2.016 USD per Month
+Most Cost Effective -> T3a Nano (Limited Burst) + RDS -> 2.026 USD per Month
 
 This option is not scalable at all and will throttle under load once all bursts are used. One year term
 
-Cost Effective and Vertically Scalable -> T3a Nano + CloudWatch + Step-Function + Lambda + EBS Snapshot + (Potential T3a Micro) -> 
+Cost Effective and Vertically Scalable -> T3a Nano + RDS + CloudWatch + Step-Function + Lambda + EBS Snapshot + (Potential T3a Micro) -> $3-4
 
 This method is good for a long term approach as the website grows and can scale accordingly
 
@@ -115,7 +115,7 @@ Most User-Friendly Method -> LightSail -> 3.5 USD per month + 0.08 USD/gb of EBS
 
 The plan can be changed month to month to meet demand, so it is pretty easily scalable.
 
-*Please note all of these costs do not include the added S3 storage as that is variable
+*Please note all of these costs do not include the added S3 storage as that is variable and the domain name depends on the suffix (or top level domain)
 
 ### After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for three main reasons:
 
@@ -129,4 +129,11 @@ If anyone from Amazon ever reads this, I'd love to know why T3 instances aren't 
 
 Thank you for reading and here is another link to the site: 
 
-  
+Resources Used:
+
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress
+https://aws.amazon.com/blogs/compute/deploying-a-highly-available-wordpress-site-on-amazon-lightsail-part-1-implementing-a-highly-available-lightsail-database-with-wordpress/
+https://aws.amazon.com/getting-started/hands-on/build-wordpress-website/
+https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/
+http://d0.awsstatic.com/whitepapers/deploying-wordpress-with-aws-elastic-beanstalk.pdf
+
