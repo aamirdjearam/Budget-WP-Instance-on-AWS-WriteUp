@@ -65,10 +65,10 @@ At the moment the customer has stated that they expect <500 users, however a key
 
 1. Vertical Scaling
 
-This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer
+This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS and SQS to trigger a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and Creates a more powerful EC2 Instance 
 
 2. Horizontal Scaling
 
 This can be achieved via a load balancer. This is the preferred method if the website spikes in popularity infrequently (ie. one or two popular articles). This is more costlier and complicated as now a load balancer is introduced as well as creating a new ENI, CloudFormation Template and keeping track of extra EC2 Instance costs. However this does provide greater Availability.
 
-
+Now that the EC2 Instance type has been selected (T3a Nano Limited Burst and possibility to move to T3a micro if there is a sustained load)
