@@ -65,7 +65,7 @@ At the moment the customer has stated that they expect <500 users, however a key
 
 1. Vertical Scaling
 
-This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS (to inform the user), SQS to trigger a SQS function that triggers a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and creates a more powerful EC2 Instance consisting of a T3 Micro (Limited Burst).
+This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS (to inform the user), SQS to trigger a SQS function that triggers a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and creates a more powerful EC2 Instance consisting of a T3 Micro (Limited Burst). **EDIT(2021/02/17) The Wordpress site will need to be manually migrated**
 
 2. Horizontal Scaling
 
@@ -126,9 +126,13 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 
 ## The key take away!
 
-If anyone from Amazon ever reads this, I'd love to know why T3 instances aren't the default for Lightsail and is the Lightscale discount caused by mass economies of scale 
+### It's important to always well architect solutions with a long-term plan from the start. This can help mitigate problems down the road with scalability/reliability. 
 
-Thank you for reading and here is another link to the site: 
+### Turn off Unlimited Burst on T3 instances to save money and prevent an unexpected bill
+
+### T3 instances are more cost-effective and better performing compared to their T2 counter-parts
+
+### Migrating Wordpress Instances cannot be automated (just of yet... keep an eye for future projects)
 
 Resources Used:
 
