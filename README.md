@@ -117,11 +117,12 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 
 *Please note all of these costs do not include the added S3 storage as that is variable and the domain name depends on the suffix (or top level domain)
 
-### After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for three main reasons:
+### After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for four main reasons:
 
 1. Accessibility: If the admin ever needs to be changed, granting permissions to a single Lightsail instance via IAM is simpler than granting access to multiple different services (altough a group and policy could be made to mitigate this)
-2. Scaling the instances both vertically and horizontally can be done very easily via Load balancers built into Lightsail and changing the Instance type by launching a new Lightsail instance
-3. Most importantly, month to month flexibility. The client is unsure how much content they will be putting into this wordpress website and may need to hibernate it for periods of time
+2. This follows the tenant of not being 
+3. Scaling the instances both vertically and horizontally can be done very easily via Load balancers built into Lightsail and changing the Instance type by launching a new Lightsail instance
+4. Most importantly, month to month flexibility. The client is unsure how much content they will be putting into this wordpress website and may need to hibernate it for periods of time
 
 ## The key take away!
 
@@ -136,4 +137,4 @@ https://aws.amazon.com/blogs/compute/deploying-a-highly-available-wordpress-site
 https://aws.amazon.com/getting-started/hands-on/build-wordpress-website/
 https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/
 http://d0.awsstatic.com/whitepapers/deploying-wordpress-with-aws-elastic-beanstalk.pdf
-
+https://aws.amazon.com/blogs/aws/new-t3-instances-burstable-cost-effective-performance/
