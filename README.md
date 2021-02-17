@@ -14,7 +14,7 @@ This ReadMe will be seperated into several different sections
 1. Objective
 2. Planning phase
 3. Lightsail vs EC2 AMI/RDS
-4. Analysis
+4. S3 Integration
 5. Route 53
 6. Further Cost Optomizations
 7. Conclusion
@@ -81,6 +81,10 @@ Lightsail is one of the most popular services available on AWS due to it's simpl
 
 It is assumed that Lightsail uses T2 Nano (limited) instances for its least expensive plan ($3.5 USD). This can be inferred as it lists having only [1 VCPU](https://aws.amazon.com/lightsail/pricing/) similar to the T2 options on the EC2 Menu. 
 
-Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. 
+Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. It's also incredibly easy to setup Automatic EBS Snapshots which if we 
 
-All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only avialable in certain availabilty zones, so if latency is a concern 
+All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only avialable in certain availabilty zones, so if latency is a concern this should be avoided unless the user also wants to setup a CDN (Content Delivery Network)
+
+## S3 Integration
+
+Part of AWS Cheat Sheet is the integration of hands on video 
