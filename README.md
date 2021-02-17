@@ -1,4 +1,4 @@
-# Ultimate-AWS-Cheat-Sheet (Set-up Guide)
+# Hosting an Inexpensive Worpress Site (An Architect Approach)
 
 ## Objective
 
@@ -6,7 +6,7 @@ Short Summary: Host an infrequently used WordPress Website completely on AWS as 
 
 Longer version:
 
-The Ultimate AWS Cheat Sheet is a wordpress Website hosted on Amazon Elastic Compute Cloud. The objective of this project is to host the website completely using AWS services for as little as possible. The project should adhere to the core principles of the AWS Well-Architected Principles but should prioritize cost-optomization. We will architect several different solutions and then choose the most appropriate path depending on what the customer values.
+The Ultimate AWS Cheat Sheet is a dynamic wordpress Website hosted on Amazon Elastic Compute Cloud. The objective of this project is to host the website completely using AWS services for as little as possible. The project should adhere to the core principles of the AWS Well-Architected Principles but should prioritize cost-optomization. We will architect several different solutions and then choose the most appropriate path depending on what the customer values.
   
 This Readme will be seperated into several different sections
   
@@ -63,12 +63,20 @@ Ultimatly this decision depends on the customer's values and expectations. Consi
 
 At the moment the customer has stated that they expect <500 users, however a key pillar of AWS is ***Scalability***. There is two ways to scale in this case.
 
+### Scaling
+
 1. Vertical Scaling
 
-This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS and SQS to trigger a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and Creates a more powerful EC2 Instance 
+This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS (to inform the user), SQS to trigger a SQS function that triggers a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and creates a more powerful EC2 Instance consisting of a T3 Micro (Limited Burst).
 
 2. Horizontal Scaling
 
 This can be achieved via a load balancer. This is the preferred method if the website spikes in popularity infrequently (ie. one or two popular articles). This is more costlier and complicated as now a load balancer is introduced as well as creating a new ENI, CloudFormation Template and keeping track of extra EC2 Instance costs. However this does provide greater Availability.
 
-Now that the EC2 Instance type has been selected (T3a Nano Limited Burst and possibility to move to T3a micro if there is a sustained load)
+Now that the EC2 Instance type has been selected (T3a Nano Limited Burst and possibility to move to T3a micro if there is a sustained load) we can move onto a comparison with Lightsail
+
+## Lightsail vs EC2/RDS
+
+Lightsail is one of the most popular services available on AWS due to it's simplicity. In under 2 minutes, a user can create and host a wordpress instance. While this accessibility is certainly nice and the costs are very competitive with on-demand instances, it is less cost-efficent compared to reserved instances. 
+
+It is assumed that Lightsail uses T2 Nano instances for its least expensive plan ($3.5 USD)
