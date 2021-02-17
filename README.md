@@ -83,7 +83,7 @@ It is assumed that Lightsail uses T2 Nano (limited) instances for its least expe
 
 Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. It's also incredibly easy to setup Automatic EBS Snapshots which if we 
 
-All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only avialable in certain availabilty zones, so if latency is a concern this should be avoided unless the user also wants to setup a CDN (Content Delivery Network)
+All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only available in certain availabilty zones, so if latency is a concern this should be avoided unless the user also wants to setup a CDN (Content Delivery Network)
 
 ## S3 Integration
 
@@ -91,4 +91,24 @@ Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosti
 
 ## Route 53
 
-Route 53 is a useful service for registering a domain name and DNS for the site. It offers different pricing according to the suffix used for the site. In this case we opted for the most-common .com suffix which cost about $12 USD. The process is roughly the same 
+Route 53 is a useful service for registering a domain name and DNS for the site. It offers different pricing according to the suffix used for the site. In this case we opted for the most-common .com suffix which cost about $12 USD. The process is very similar on both lightsail and on a standard EC2 instance. We registered the name UltimateAWSCheatSheet.com
+
+## Further Cost Optomization
+
+In order to further cost optomize we should look at the different parts of the arcitechure and see where we can cut back. Using a T3a Nano (limited burst) on a reserved instance would be the most-cost effective hardware option which would mean avoiding Lightsail. 
+
+Losing the ability to scale by avoiding both CloudWatch monitoring and a Load Balancer would also save costs
+
+Finally registering a domain with the suffix .link ($5 USD) would be the most-cost effective URL
+
+## Conclusion
+
+Let's recap all of the options with a nifty table
+
+| CPU Cores     | RAM           || Price Per Hour| Second Header |
+| ------------- | ------------- || ------------- | ------------- |
+| 1 CPU Core (Skylake)  | Content Cell  || Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  || Content Cell  | Content Cell  |
+
+
+  
