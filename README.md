@@ -8,7 +8,7 @@ Longer version:
 
 The Ultimate AWS Cheat Sheet is a dynamic wordpress Website hosted on Amazon Elastic Compute Cloud. The objective of this project is to host the website completely using AWS services for as little as possible. The project should adhere to the core principles of the AWS Well-Architected Principles but should prioritize cost-optomization. We will architect several different solutions and then choose the most appropriate path depending on what the customer values.
   
-This Readme will be seperated into several different sections
+This ReadMe will be seperated into several different sections
   
 
 1. Objective
@@ -79,4 +79,4 @@ Now that the EC2 Instance type has been selected (T3a Nano Limited Burst and pos
 
 Lightsail is one of the most popular services available on AWS due to it's simplicity. In under 2 minutes, a user can create and host a wordpress instance. While this accessibility is certainly nice and the costs are very competitive with on-demand instances, it is less cost-efficent compared to reserved instances. 
 
-It is assumed that Lightsail uses T2 Nano instances for its least expensive plan ($3.5 USD)
+It is assumed that Lightsail uses T2 Nano instances for its least expensive plan ($3.5 USD). This can be inferred as it lists having only [1 VCpu](https://aws.amazon.com/lightsail/pricing/) similar to the 
