@@ -58,7 +58,7 @@ Choosing this method does come with one big caveat however:
 
 Similar to the T2Unlimited instances, the T3 instances allow for much greater burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) could cause the system to run at maximum resources
 
-So what's the golden solution: **Disable Unlimited**
+So 
 
 
 
