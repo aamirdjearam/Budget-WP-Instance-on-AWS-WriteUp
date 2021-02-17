@@ -13,9 +13,12 @@ This Readme will be seperated into several different sections
 
 1. Objective
 2. Planning phase
-3. Analysis
-4. Route 53
-5. Conclusion
+3. Lightsail vs EC2 AMI/RDS
+4. Analysis
+5. Route 53
+6. Further Cost Optomizations
+7. Conclusion
+8. Future Goals
 
   
   
@@ -49,11 +52,13 @@ In the most probable scenario (less than 500 visitors per month) a T3a Nano Inst
 
 1. This is the least expensive pricing option
 2. Offers greater performance due to the additional VCPU core compared to T2 as well as better cpu architecture
-3. Has unlimited Burst so the website will be able to handle a relatively large amount of stress for prolonged periods
+3. Has much greater Burst so the website will be able to handle a relatively large amount of stress for prolonged periods
 
 Choosing this method does come with one big caveat however:
 
-Similar to the T2Unlimited instances, the T3 instances allow for unlimited burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) 
+Similar to the T2Unlimited instances, the T3 instances allow for much greater burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) could cause the system to run at maximum resources
+
+So what's the golden solution: **Disable Unlimited**
 
 
 
