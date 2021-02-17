@@ -26,7 +26,7 @@ This Readme will be seperated into several different sections
 
 Due to time constraints, creating a custom website utilizing HTML, CSS & Javascript was not a possibility, so we began to look for alternatives. **Wordpress was ultimately chosen as an alternative as it was inexpensive, flexible with AWS and easy to use.** Amazon has already posted a whitepaper regarding how to install Wordpress using Amazon Lightsail however we would also like to make this available on all Availability Zones. Currently the Wordpress Lightsail Instance is unavailable in the US West region (US WEST-1 N. California) and while the latency difference wouldn't particularly be noticable. 
 
-We will try multiple methods and calculate the cost, performance, scalability and availability. 
+We will try multiple methods and calculate the **cost, performance, scalability and availability**. 
 
 For Test Instances we will utilize a dummy site with dummy data using the ["Demo Data Creator Plugin"](https://wordpress.org/plugins/demo-data-creator/) 
 
@@ -53,12 +53,15 @@ In the most probable scenario (less than 500 visitors per month) a T3a Nano Inst
 1. This is the least expensive pricing option
 2. Offers greater performance due to the additional VCPU core compared to T2 as well as better cpu architecture
 3. Has much greater Burst so the website will be able to handle a relatively large amount of stress for prolonged periods
+4. Generates more credits per hour and credits are stored in a weekly amount instead of a daily limit
 
 Choosing this method does come with one big caveat however:
 
-Similar to the T2Unlimited instances, the T3 instances allow for much greater burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) could cause the system to run at maximum resources
+Similar to the T2Unlimited instances, the T3 instances allow for much greater burst and no performance throttling which can ***drastically*** increase the price of the instance if the hardware is being heavily utilized above the baseline. Without adding the additional protection of AWS Shield Advanced, more complicated DDOS attacks or SQL injections (due to the mySQL database used by this WordPress Instance) could cause the system to run at maximum resources.
 
-So 
+Ultimatly this decision depends on the customer's values and expectations. Considering that I (a college student) am the customer in this case, I want to prioritize lower costs and sacrifice on the performance side of things. This means disabling the Unlimited Burst option *(Turned on by default for T3 instances)*
+
+At the moment the customer has stated that they expect <500 users, however a key pillar of AWS is ***Scalability***. There is two ways to scale in this case.
 
 
 
