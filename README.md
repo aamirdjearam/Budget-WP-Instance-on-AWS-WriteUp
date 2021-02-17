@@ -18,9 +18,7 @@ This ReadMe will be seperated into several different sections
 5. Route 53
 6. Further Cost Optomizations
 7. Conclusion
-8. Future Goals
 
-  
   
 ## Planning Phase
 
@@ -103,11 +101,24 @@ Finally registering a domain with the suffix .link ($5 USD) would be the most-co
 
 ## Conclusion
 
-Let's recap all of the options with a nifty table
+Let's recap all of the options:
 
-| First Header  | Second Header | Second Header |
-| ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  | Second Header |
-| Content Cell  | Content Cell  | Second Header |
+Most Cost Effective -> T3a Nano (Limited Burst) -> 2.016 USD per Month
+
+This option is not scalable at all and will throttle under load once all bursts are used. One year term
+
+Cost Effective and Vertically Scalable -> T3a Nano + CloudWatch + Step-Function + Lambda + EBS Snapshot + (Potential T3a Micro) -> 
+
+This method is good for a long term approach as the website grows and can scale accordingly
+
+Most User-Friendly Method -> LightSail -> 3.5 USD per month + 0.08 USD/gb of EBS Snapshots
+
+The plan can be changed month to month to meet demand, so it is pretty easily scalable.
+
+*Please note all of these costs do not include the added S3 storage as that is variable
+
+# After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for three main reasons:
+
+1. Accessibility: If the admin ever needs to be changed, granting permissions to a single Lightsail instance via IAM is simpler than granting 
 
   
