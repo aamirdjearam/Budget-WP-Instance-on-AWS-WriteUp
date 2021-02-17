@@ -79,4 +79,8 @@ Now that the EC2 Instance type has been selected (T3a Nano Limited Burst and pos
 
 Lightsail is one of the most popular services available on AWS due to it's simplicity. In under 2 minutes, a user can create and host a wordpress instance. While this accessibility is certainly nice and the costs are very competitive with on-demand instances, it is less cost-efficent compared to reserved instances. 
 
-It is assumed that Lightsail uses T2 Nano instances for its least expensive plan ($3.5 USD). This can be inferred as it lists having only [1 VCPU](https://aws.amazon.com/lightsail/pricing/) similar to the T2 options on the EC2 Menu. 
+It is assumed that Lightsail uses T2 Nano (limited) instances for its least expensive plan ($3.5 USD). This can be inferred as it lists having only [1 VCPU](https://aws.amazon.com/lightsail/pricing/) similar to the T2 options on the EC2 Menu. 
+
+Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. 
+
+All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only avialable in certain availabilty zones, so if latency is a concern 
