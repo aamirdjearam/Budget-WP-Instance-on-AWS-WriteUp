@@ -25,7 +25,7 @@ For Test Instances we will utilize a dummy site with dummy data using the ["Demo
 
 # T2 VS T3a / Micro or Nano
 
-Part of architecting any solution on AWS should start with estimating Hardware Requirements as the first step as this dictates the majority of the pricing for this project. For running a Wordpress instance (with most likely less than 500 visitors per month) a single nano instance should theoretically be more than enough performance to handle this workload. Depending on the type of the nano instance this method could prove to be unoptimal. **Pricing calculations will all be done based on the 1-year reserved instance pricing.** 
+Part of architecting any solution on AWS should start with estimating Hardware Requirements as the first step as this dictates the majority of the pricing for this project. For running a Wordpress instance (with most likely less than 500 visitors per month) a single nano instance should theoretically be more than enough performance to handle this workload. Depending on the type of the nano instance this method could prove to be unoptimal. **Pricing calculations will all be done based on the 1-year reserved instance pricing and is the cost per hour.** 
 
 Lets break down the possible configurations:
 
@@ -34,7 +34,14 @@ T2 Micro ($0.0070)
 T3a Nano ($0.0028)
 T3a Micro ($0.0056)
 
-In the most probable scenario (less than 500 visitors per month) a T3a Nano Instance would be the ideal configuration
+In the most probable scenario (less than 500 visitors per month) a T3a Nano Instance would be the ideal configuration for several key reasons.
+
+1. This is the least expensive pricing option
+2. Offers greater performance due to the additional VCPU core compared to T2 as well as better cpu architecture
+3. Has unlimited Burst so the website will be able to handle a relatively large amount of stress for prolonged periods
+
+
+5. 
 
 
 
