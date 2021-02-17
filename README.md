@@ -63,6 +63,12 @@ Ultimatly this decision depends on the customer's values and expectations. Consi
 
 At the moment the customer has stated that they expect <500 users, however a key pillar of AWS is ***Scalability***. There is two ways to scale in this case.
 
+1. Vertical Scaling
 
+This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer
+
+2. Horizontal Scaling
+
+This can be achieved via a load balancer. This is the preferred method if the website spikes in popularity infrequently (ie. one or two popular articles). This is more costlier and complicated as now a load balancer is introduced as well as creating a new ENI, CloudFormation Template and keeping track of extra EC2 Instance costs. However this does provide greater Availability.
 
 
