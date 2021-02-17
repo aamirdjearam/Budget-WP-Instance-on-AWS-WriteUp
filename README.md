@@ -36,11 +36,13 @@ Lets break down the possible configurations:
 [T2 Instances:](https://i.imgur.com/n5UMxPy.png)
 
 T2 Nano ($0.0030)
+
 T2 Micro ($0.0070)
 
 [T3 Instances:](https://i.imgur.com/3FtouFx.png)
 
 T3a Nano ($0.0028)
+
 T3a Micro ($0.0056)
 
 In the most probable scenario (less than 500 visitors per month) a T3a Nano Instance would be the ideal configuration for several key reasons.
