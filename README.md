@@ -13,7 +13,6 @@ This Readme will be seperated into several different sections
 4. Route 53
 5. Conclusion
 
-
   
   
 ## Planning Phase
@@ -30,9 +29,12 @@ Part of architecting any solution on AWS should start with estimating Hardware R
 
 Lets break down the possible configurations:
 
-T2 Nano ($0.003)
+T2 Nano ($0.0030)
+T2 Micro ($0.0070)
+T3a Nano ($0.0028)
+T3a Micro ($0.0056)
 
-In the most probable scenario (less than 500 visitors per month) a T3 instance
+In the most probable scenario (less than 500 visitors per month) a T3a Nano Instance would be the ideal configuration
 
 
 
