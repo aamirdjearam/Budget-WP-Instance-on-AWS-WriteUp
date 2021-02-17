@@ -137,6 +137,11 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 * Migrating Wordpress Instances cannot be automated (just of yet... keep an eye for future projects) *
 
 
+## Question for Readers (please comment below)
+
+Why does Lightsail use T2 instances by default for wordpress? (noted by only 1 CPU Core)
+
+
 Thank you for reviewing my project! :)
 
 
