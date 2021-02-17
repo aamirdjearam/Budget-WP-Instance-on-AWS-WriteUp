@@ -101,7 +101,7 @@ Losing the ability to scale by avoiding both CloudWatch monitoring and a Load Ba
 
 Finally registering a domain with the suffix .link ($5 USD) would be the most-cost effective URL
 
-## Conclusion
+# Conclusion
 
 Let's recap all of the options:
 
