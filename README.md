@@ -91,4 +91,4 @@ Part of AWS Cheat Sheet is the integration of hands on video tutorials. By hosti
 
 ## Route 53
 
-Route 53 is a useful service for registering a domain name and DNS for the site. 
+Route 53 is a useful service for registering a domain name and DNS for the site. It offers different pricing according to the suffix used for the site. In this case we opted for the most-common .com suffix which cost about $12 USD. The process is roughly the same 
