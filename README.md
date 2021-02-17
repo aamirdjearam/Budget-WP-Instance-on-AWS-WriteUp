@@ -117,8 +117,16 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 
 *Please note all of these costs do not include the added S3 storage as that is variable
 
-# After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for three main reasons:
+### After weighing out all of the options, and considering everything from a customer perspective we've decided to go with a Lightsail instance for three main reasons:
 
-1. Accessibility: If the admin ever needs to be changed, granting permissions to a single Lightsail instance via IAM is simpler than granting 
+1. Accessibility: If the admin ever needs to be changed, granting permissions to a single Lightsail instance via IAM is simpler than granting access to multiple different services (altough a group and policy could be made to mitigate this)
+2. Scaling the instances both vertically and horizontally can be done very easily via Load balancers built into Lightsail and changing the Instance type by launching a new Lightsail instance
+3. Most importantly, month to month flexibility. The client is unsure how much content they will be putting into this wordpress website and may need to hibernate it for periods of time
+
+## The key take away!
+
+If anyone from Amazon ever reads this, I'd love to know why T3 instances aren't the default for Lightsail and is the Lightscale discount caused by mass economies of scale 
+
+Thank you for reading and here is another link to the site: 
 
   
