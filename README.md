@@ -9,6 +9,8 @@ Short Summary: There are multiple ways to host a wordpress website on AWS with d
 Longer version:
 
 The Ultimate AWS Cheat Sheet is a dynamic wordpress Website hosted on Amazon Elastic Compute Cloud. The objective of this project is to host the website completely using AWS services for as little as possible. The project should adhere to the core principles of the AWS Well-Architected Principles but should prioritize cost-optomization. We will architect several different solutions and then choose the most appropriate path depending on what the customer values.
+
+Keep in mind we will be adhering to the [5 Pillars of the AWS Well Architected Framework](https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-framework/)
   
 This ReadMe will be seperated into several different sections
   
