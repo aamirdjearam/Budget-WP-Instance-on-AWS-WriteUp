@@ -1,4 +1,4 @@
-# Hosting an Inexpensive Worpress Site (An Architect Approach)
+# The most cost-effective method of hosting a WordPress Site completely on AWS
 
 ## Objective
 
@@ -35,6 +35,8 @@ For Test Instances we will utilize a dummy site with dummy data using the ["Demo
 ### T2 VS T3a / Micro or Nano
 
 Part of architecting any solution on AWS should start with estimating Hardware Requirements as the first step as this dictates the majority of the pricing for this project. For running a Wordpress instance (with most likely less than 500 visitors per month) a single nano instance should theoretically be more than enough performance to handle this workload. Depending on the type of the nano instance this method could prove to be unoptimal. **Pricing calculations will all be done based on the 1-year reserved instance pricing and is the cost per hour.** 
+
+T2 cores are based off of Intel Architecture (Intel Xeon) while T3a cores are based off of (AMD EPYC 7000) architecture.
 
 Lets break down the possible configurations:
 
