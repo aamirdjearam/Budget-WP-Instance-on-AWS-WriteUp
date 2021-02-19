@@ -143,7 +143,7 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 3. Scaling the instances both vertically and horizontally can be done very easily via Load balancers built into Lightsail and changing the Instance type by launching a new Lightsail instance
 4. Most importantly, month to month flexibility. The client is unsure how much content they will be putting into this wordpress website and may need to hibernate it for periods of time
 
-## The key take away! (IE REFLECTION)
+## The key take away!
 
 * It's important to always well architect solutions with a long-term plan from the start. This can help mitigate problems down the road with scalability/reliability * 
 
