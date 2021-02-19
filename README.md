@@ -21,7 +21,8 @@ This ReadMe will be seperated into several different sections
 4. S3 Integration
 5. Route 53
 6. Further Cost Optomizations
-7. Conclusion
+7. Additional Add-Ons
+8. Conclusion
 
   
 ## Planning Phase
@@ -104,6 +105,16 @@ In order to further cost optomize we should look at the different parts of the a
 Losing the ability to scale by avoiding both CloudWatch monitoring and a Load Balancer would also save costs
 
 Finally registering a domain with the suffix .link ($5 USD) would be the most-cost effective URL
+
+## Additional Add-Ons
+
+#### Cloudfront
+
+Amazon Cloudfront allows the user to asccess static and dynamic content with lower latency by caching the most accessed material at end-points closer to the end-user. This is especially useful if you are using Lightsail Wordpress instance in an area with no closeby availability zones.
+
+#### EFS (Elastic File System)
+
+Amazon EFS is a scalable network file system that allows the user to access unstructered wordpress data much faster such as plugins, themes, add-ons, or PHP files
 
 # Conclusion
 
