@@ -88,7 +88,7 @@ Lightsail is one of the most popular services available on AWS due to it's simpl
 
 It is assumed that Lightsail uses T2 Nano (limited) instances for its least expensive plan ($3.5 USD). This can be inferred as it lists having only [1 VCPU](https://aws.amazon.com/lightsail/pricing/) similar to the T2 options on the EC2 Menu. 
 
-Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. It's also incredibly easy to setup Automatic EBS Snapshots which if we 
+Lightsail does come with some benefits for the pricing, mainly the 1TB of Transfer included in the plan. It's also incredibly easy to setup Automatic EBS Snapshots which if we did through the EC2 method would require another service such as CloudWatch Events or Amazon Lifecycle Manager
 
 All in all if the customer would like a very simple to setup and maintain solution without any unexpected costs, Lightsail is certainly the way to go. In the case of AWS Ultimate Cheat Sheet, we are aiming to maximize our performance per dollar while maintaining scalability so the use of scalable T3a instances are the better solution. Lightsail instances are also only available in certain availabilty zones, so if latency is a concern this should be avoided unless the user also wants to setup a CDN (Content Delivery Network)
 
@@ -156,7 +156,7 @@ The plan can be changed month to month to meet demand, so it is pretty easily sc
 
 ## Question for Readers (please comment below)
 
-Why does Lightsail use T2 instances by default for wordpress? (noted by only 1 CPU Core)
+Why does Lightsail use T2 instances by default for wordpress instead of T3 instances? (noted by only 1 CPU Core)
 
 
 Thank you for reviewing my project! :)
