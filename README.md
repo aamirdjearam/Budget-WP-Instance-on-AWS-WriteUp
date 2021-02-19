@@ -71,7 +71,7 @@ At the moment the customer has stated that they expect <500 users, however a key
 
 1. Vertical Scaling
 
-This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS (to inform the user), SQS to trigger a SQS function that triggers a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and creates a more powerful EC2 Instance consisting of a T3 Micro (Limited Burst). **EDIT(2021/02/17) The Wordpress site will need to be manually migrated as the wordpress migration cannot be activated through automation yet (WIP)**
+This can be achieved by creating an EBS Snapshot and creating a new more powerful instance using the EBS Snapshot. This is the preferred method if the website gains consistent traction as a more sustained load would be better handled by more powerful hardware instead of multiple instaces and can avoid the cost of a load balancer. In lieu of a load balancer, we can use Cloudwatch to monitor cpu utilization, from there use SNS (to inform the user), SQS to trigger a SQS function that triggers a [Lambda function that takes an EBS Snapshot](https://aws.amazon.com/blogs/compute/automating-amazon-ebs-snapshot-management-with-aws-step-functions-and-amazon-cloudwatch-events/) and creates a more powerful EC2 Instance consisting of a T3 Micro (Limited Burst). If the wordpress is reaching storage capacity, it may be worth switching to RDS to manage the SQL database, however this can be costly. **EDIT(2021/02/17) The Wordpress site will need to be manually migrated as the wordpress migration cannot be activated through automation yet (WIP)**
 
 2. Horizontal Scaling
 
@@ -109,11 +109,11 @@ Finally registering a domain with the suffix .link ($5 USD) would be the most-co
 
 Let's recap all of the options:
 
-Most Cost Effective -> T3a Nano (Limited Burst) + RDS -> 2.026 USD per Month
+Most Cost Effective -> T3a Nano (Limited Burst) -> 2.026 USD per Month
 
 This option is not scalable at all and will throttle under load once all bursts are used. One year term
 
-Cost Effective and Vertically Scalable -> T3a Nano + RDS + CloudWatch + Step-Function + Lambda + EBS Snapshot + (Potential T3a Micro) -> $3-4
+Cost Effective and Vertically Scalable -> T3a Nano + CloudWatch + Step-Function + Lambda + EBS Snapshot + (Potential T3a Micro) -> $3-4
 
 This method is good for a long term approach as the website grows and can scale accordingly
 
