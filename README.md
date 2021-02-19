@@ -24,6 +24,8 @@ This ReadMe will be seperated into several different sections
 7. Additional Add-Ons
 8. Conclusion
 
+This project will cover multiple AWS services and recommends a general understanding of the following services: (Lightsail, EFS, RDS, EC2, Lambda, S3. Cloudfront, Application Load Balancer, Auto Scaling, Route 53, AWS Shield, IAM)
+
   
 ## Planning Phase
 
