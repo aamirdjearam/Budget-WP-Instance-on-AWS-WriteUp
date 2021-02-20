@@ -33,7 +33,7 @@ Due to time constraints, creating a custom website utilizing HTML, CSS & Javascr
 
 We will try multiple methods and calculate the **cost, performance, scalability and availability**. 
 
-For Test Instances we will utilize a dummy site with dummy data using the ["Demo Data Creator Plugin"](https://wordpress.org/plugins/demo-data-creator/) 
+For Test Instances we will utilize a dummy site with dummy data using the ["Demo Data Creator Plugin"](https://wordpress.org/plugins/demo-data-creator/) to stress the page
 
 ### T2 VS T3a / Micro or Nano
 
