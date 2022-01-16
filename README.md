@@ -162,7 +162,7 @@ Why does Lightsail use T2 instances by default for wordpress instead of T3 insta
 Thank you for reviewing my project! :)
 
 
-Resources Used:
+Resources Used: 
 
 https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-tutorial-launching-and-configuring-wordpress
 
