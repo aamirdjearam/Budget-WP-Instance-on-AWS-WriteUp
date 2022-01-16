@@ -1,8 +1,9 @@
-# The most cost-effective method of hosting a WordPress Site completely on AWS
+# Hosting a Small WordPress Instance using AWS
 
 ## Objective
 
 Link to the Target Website: 	http://ultimateawscheatsheet.com/
+(Website is currently down for maintenance)
 
 Short Summary: There are multiple ways to host a wordpress website on AWS with different levels of cost-effectiveness. Skip to the [conclusion](#Conclusion) for the results.
 
